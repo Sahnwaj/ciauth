@@ -9,9 +9,9 @@ class News_model extends CI_Model {
 
 
 
-        public function get_news($slug = '')
+        public function get_news($slug = NULL)
 		{
-       		 if ($slug === '')
+       		 if ($slug === NULL)
        		 {
                 $query = $this->db->get('news');
                 return $query->result_array();
