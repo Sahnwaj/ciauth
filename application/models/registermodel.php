@@ -23,7 +23,8 @@ class registermodel extends CI_Model {
 		else{
 			return false;
 			
-				}
+				
+		}
 	}
 
 

@@ -28,7 +28,7 @@ public function signup()
                        $this->load->model('registermodel');
                      if( $this->registermodel->registerUser($username, $password)){
 
-                     		echo "Registration successful";
+                     		redirect(base_url().'registration/success');
                      }
                      else{
                      	echo "registration failed";
@@ -95,7 +95,11 @@ public function signup()
               redirect(base_url().'registration/logincheck');
             }
 
-        
+         function success(){
+                //print_r('dfgdrg'); exit;
+                echo '<h2>Registration successful</h2>';
+                echo '<label><a href=" '.base_url().'registration/logout">Logout</a></label>';
+              }
 
   }
   ?>
