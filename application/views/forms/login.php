@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-lg-6">
 			<h1>Login Here</h1>
-			<form action="validation.php" method="post">
+			<form action="logincheck" method="post">
 				<div class="form-group">
 					<label>Username</label>
 					<input type="text" name="username" class="form-control">
@@ -40,6 +40,9 @@
 					<input type="Password" name="password" class="form-control">
 				</div>
 				<button  type="submit" class="btn btn-primary">Register</button>
+				<?php 
+				echo $this->session->flashdata("error");
+				?>
 			</form>
 
 		</div> 
