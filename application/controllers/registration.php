@@ -46,7 +46,7 @@ public function signup()
 
       public function logincheck()
         {
-          // print_r('hffh'); exit;
+          //print_r('hffh'); exit;
             //$this->load->database('logindb');
 
            $this->form_validation->set_rules('username', 'Username', 'required');
@@ -60,6 +60,8 @@ public function signup()
                    if($this->registermodel->loginUser($username, $password)){
                       $session_data = array('Name' => $username );
                       $this->session->set_userdata($session_data);
+
+                      //print_r('dfd'); exit;
                       redirect(base_url().'registration/enter');
 
                    }
@@ -72,10 +74,11 @@ public function signup()
 
                     $this->load->view('forms/login');
                 }
-          
-            function enter(){
+          }
+         function enter(){
+             //print_r('gfg'); exit();
               if($this->session->userdata('Name')!=''){
-                print_r('dfgdrg'); exit;
+                //print_r('dfgdrg'); exit;
                 echo '<h2>Welcome -  '.$this->session->userdata('Name').'</h2>';
                 echo '<label><a href=" '.base_url().'registration/logout">Logout</a></label>';
               }
@@ -92,7 +95,7 @@ public function signup()
               redirect(base_url().'registration/logincheck');
             }
 
-        }
+        
 
   }
   ?>

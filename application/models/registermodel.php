@@ -18,10 +18,12 @@ class registermodel extends CI_Model {
 		if($query->num_rows() >0)
 		{
 			return true;
+			
 		}
 		else{
 			return false;
-		}
+			
+				}
 	}
 
 
