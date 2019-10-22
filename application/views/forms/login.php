@@ -29,7 +29,6 @@
 			</form>
 
 		</div> 
-	
 		<div class="col-lg-6">
 			<h1>Register Here</h1>
 			<form action="signup" method="post">
@@ -46,7 +45,7 @@
 				</div>
 				<button  type="submit" class="btn btn-primary">Register</button>
 				<?php 
-				echo $this->session->flashdata("error");
+				//echo //$this->session->flashdata("error");
 				?>
 			</form>
 
@@ -64,10 +63,11 @@
 	
 .container{
 
-  padding: 60px;  
-
-  border-style: groove; 
-  
+  padding: 30px;  
+ 	box-sizing: border-box;
+ 	border-style: groove; 
+  position: center;
+ 
 }
 	body{
 background-image: url(<?=base_url()?>/assests/images/bgrnd.jpg);

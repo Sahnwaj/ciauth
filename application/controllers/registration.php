@@ -79,7 +79,9 @@ public function signup()
              //print_r('gfg'); exit();
               if($this->session->userdata('Name')!=''){
                 //print_r('dfgdrg'); exit;
-                echo '<h2>Welcome -  '.$this->session->userdata('Name').'</h2>';
+               // echo '<h2>Welcome -  '.$this->session->userdata('Name').'</h2>';
+
+                $this->load->view('myFirstPage');
                 echo '<label><a href=" '.base_url().'registration/logout">Logout</a></label>';
               }
 
@@ -100,6 +102,15 @@ public function signup()
                 echo '<h2>Registration successful</h2>';
                 echo '<label><a href=" '.base_url().'registration/logout">Logout</a></label>';
               }
+
+        function userprofile(){
+        //print_r('dfgdrg'); exit;
+        $this->load->view('user/adduser');
+      }
+       function profileview(){
+        //print_r('dfgdrg'); exit;
+        $this->load->view('user/viewuser');
+      }
 
   }
   ?>
