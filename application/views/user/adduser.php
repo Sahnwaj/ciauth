@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>Add User</h2>
-<form>
+<form action="userprofile"  method="post">
 	<div class="container">
 		<div  class="row">
 			<div class="col-lg-6">
