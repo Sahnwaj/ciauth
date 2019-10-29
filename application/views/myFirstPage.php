@@ -11,7 +11,7 @@ echo '<h2>Welcome-  '.$this->session->userdata('Name').'</h2>';
 	<div class="row">
 <div>
 
-<?php echo '<label><a href=" '.base_url().'registration/userprofile">Add User Profile</a></label>'; ?>
+<?php echo '<label><a href=" '.base_url().'userprofile/addusers">Add User Profile</a></label>'; ?>
 
 </div>
 <br><br>

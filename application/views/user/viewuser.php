@@ -31,7 +31,16 @@
 				
 
 			</div>
-		
+			    <div>
+		        <h3>Congratulations, the image has successfully been uploaded</h3>
+		        <p>Click here to view the image you just uploaded
+		            <?=anchor('images/'.$image_metadata['file_name'], 'View My Image!')?>
+		        </p>
+
+		        <p>
+		            <?php echo anchor('upload-image', 'Go back to Image Upload'); ?>
+		        </p>
+   			   </div>
 		
 	
 			<div class="col-lg-6">
