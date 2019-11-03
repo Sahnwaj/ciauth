@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Add Users</title>
+	<title>Add Users</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/assests/css/bootstrap.css">
 </head>
 <body>
 <h2>Add User</h2>
-<form  action="insert"  method="post" enctype="multipart/form-data">
+<form action="insert"  method="post"  enctype="multipart/form-data">
 	<div class="container">
-		<div class="row">
+		<div  class="row">
 			<div class="col-lg-6">
-				
+
 				<div>
 					First Name: <input type="text" name="first_name" class="form-control">
 					<span class="text-danger"><?php echo form_error('first_name'); ?></span>
@@ -42,13 +42,11 @@
 				<br /><br />
 						
 				<button  type="submit" class="btn btn-primary">Add User</button>
+
 			</div>
-
 		</div>
-
+		
 	</div>
-
-
 </form>
 </body>
 </html>
@@ -65,3 +63,7 @@
 }
 
 </style>
+
+  
+
+

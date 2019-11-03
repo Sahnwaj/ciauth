@@ -11,10 +11,10 @@
 		<div  class="row">
 			<div class="col-lg-6">
 				<div>
-					First Name: <label type="text" name="first_name" class="form-control"></label> 
+					First Name: <input type="text" name="first_name" class="form-control"></input> 
 				</div><br>
 				<div>
-					Last Name: <label type="text" name="last_name" class="form-control"></label> 
+					Last Name: <input type="text" name="last_name" class="form-control"></input> 
 				</div><br>
 				<div>
 					Father Name: <label type="text" name="father_name" class="form-control"></label>
@@ -27,21 +27,7 @@
 				</div><br>
 				<div>
 					Country: <label type="text" name="country" class="form-control"></label>
-				</div><br>
-				
-
-			</div>
-			    <div>
-		        <h3>Congratulations, the image has successfully been uploaded</h3>
-		        <p>Click here to view the image you just uploaded
-		            <?=anchor('images/'.$image_metadata['file_name'], 'View My Image!')?>
-		        </p>
-
-		        <p>
-		            <?php echo anchor('upload-image', 'Go back to Image Upload'); ?>
-		        </p>
-   			   </div>
-		
+				</div><br>	
 	
 			<div class="col-lg-6">
 				<img src="<?=base_url()?>/assests/images/EGIL43804.jpg">

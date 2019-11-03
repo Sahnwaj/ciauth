@@ -34,12 +34,27 @@ class registermodel extends CI_Model {
          $email= $this->input->post('email');
          $mobile= $this->input->post('mobile');
          $country= $this->input->post('country');
-         $image= $this->input->post('userimage');
+
+
+        // $image= $this->input->post('images');
+         //print_r("dfdf"); exit();
          
-		$w = array('first_name'=>$firstname, 'last_name'=>$lastname, 'father_name'=>$fathername, 'email'=>$email, 'mobile'=>$mobile, 'country'=>$country, 'userimage'=>$image);
+		$w = array('first_name'=>$firstname, 'last_name'=>$lastname, 'father_name'=>$fathername, 'email'=>$email, 'mobile'=>$mobile, 'country'=>$country, 'userimage'=>$x);
 
 		
-		 $this->db->insert('users',$w);
+
+		
+		 return $this->db->insert('users',$w);
+
+		 //print_r("dfdf"); exit();
+	}
+
+	public function fetch_data(){
+
+		$goal=$this->db->get('users');
+
+		return $goal;
+
 	}
 
 

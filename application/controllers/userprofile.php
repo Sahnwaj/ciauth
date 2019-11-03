@@ -23,7 +23,7 @@ class userprofile extends CI_controller
 	}
 	
 
-    	public function do_upload()
+    	public function insert()
         {
         		//print_r('wrong');
         	   //$this->load->library('form_validation')
@@ -33,31 +33,41 @@ class userprofile extends CI_controller
 			$this->form_validation->set_rules('email', 'Email', 'required');
 			$this->form_validation->set_rules('mobile', 'Mobile', 'required');
 			$this->form_validation->set_rules('country', 'Country', 'required');
-			//$this->form_validation->set_rules('userimage', '', 'required');
+			
 
-			if($this->form_validation->run()== TRUE ){
+			if($this->form_validation->run() == TRUE ){
                 $config['upload_path']= './assests/';
                 $config['allowed_types']= 'gif|jpg|png';
 
                 $this->load->library('upload', $config);
 
-                if ( !$this->upload->do_upload('userimage'))
+                if(!$this->upload->do_upload('images'))
                 {
                        echo "error";
                 }
                 else
                 {
+                     
+                      //echo 'jdjdn';exit();
                         $fd=$this->upload->data();
                         //$data = array('upload_data' => $this->upload->data());
                         $fn=$fd['file_name'];
-                        $this->registermodel->addUsers($fn);
+                       // echo ("<pre>");
+                       // print_r($fd); exit();
+
+                        $target= base_url().'assests/'.$fn;
+
+                        //echo $target; exit();
+                        $this->registermodel->addUsers($target);
+
+
                         echo '<label><a href=" '.base_url().'userprofile/success">Logout</a></label>';
 
                 }
 
               }
                 else{
-
+                      print_r("sdfhsdjh");
                 }
 
             
@@ -75,6 +85,15 @@ class userprofile extends CI_controller
 
           //$this->session->unset_userdata('Name');
           redirect(base_url().'userprofile/addusers');
+        }
+
+        function fetch(){
+
+          //print_r('fgfgf'); exit();
+          $data["fetch_data"]=$this->registermodel->fetch_data();
+          $this->load->view("viewdata", $data);
+
+
         }
 
               

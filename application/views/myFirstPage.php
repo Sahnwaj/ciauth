@@ -16,7 +16,7 @@ echo '<h2>Welcome-  '.$this->session->userdata('Name').'</h2>';
 </div>
 <br><br>
 <div>
-<?php echo '<label><a href=" '.base_url().'registration/profileview">User Profile View</a></label>'; ?>
+<?php echo '<label><a href=" '.base_url().'userprofile/fetch">User Profile View</a></label>'; ?>
 
 </div>
 <br><br>
